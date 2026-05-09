@@ -12,7 +12,7 @@ dotenv.config()
 const {userRouter} = require('./routes/userRoutes')
 
 const {adminRouter} = require('./routes/adminRoutes')
-const {courseRouter} = require('./routes/courseRoutes')
+const courseRouter = require('./routes/courseRoutes')
 
 
 

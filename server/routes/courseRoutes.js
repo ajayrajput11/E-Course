@@ -7,4 +7,4 @@ const courseRouter = express.Router();
 courseRouter.get("/courses", getAllCourse);
 courseRouter.get("/course/:id", getSingleCourse);
 
-module.exports = { courseRouter };
+module.exports =  courseRouter ;
