@@ -149,10 +149,24 @@ const deleteCourse = async (req, res) => {
 //GET ALL PUBLIC COURSES
 const getAllCourse = async (req, res) => {
   try {
+    console.log("GET ALL COURSES ROUTE HIT");
+
     const courses = await Course.find();
-    res.status(200).json({ success: true, courses });
+
+    console.log("Courses fetched:", courses);
+
+    res.status(200).json({
+      success: true,
+      courses,
+    });
+
   } catch (error) {
-    res.status(500).json({ message: 'Server error', error: error.message });
+    console.log("COURSE FETCH ERROR:", error);
+
+    res.status(500).json({
+      success: false,
+      error: error.message,
+    });
   }
 };
 
